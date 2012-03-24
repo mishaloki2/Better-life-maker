@@ -1,0 +1,34 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="BetterLifeMaker.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Height="Auto" HorizontalAlignment="Stretch" Margin="0" Source="/Image/bgImage.jpg" Name="bgImage" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" Opacity="0" Tap="bgImage_Tap" />
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Make my life better" Height="72" HorizontalAlignment="Center" Margin="0,200,0,0" Name="makeBtn" VerticalAlignment="Center" Width="Auto" Click="makeBtn_Click" />
+            <ProgressBar Height="4" HorizontalAlignment="Stretch" Margin="0" Name="lifeLine" VerticalAlignment="Center" Width="460" />
+            <Image Height="50" Source="/Image/thumb_down.png"  HorizontalAlignment="Left" Margin="12,80,0,0" Name="worseImage" Stretch="Fill" VerticalAlignment="Center" Width="50" />
+            <Image Height="50" Source="/Image/thumb_up.png" HorizontalAlignment="Right" Margin="0,-70,0,0" Name="betterImage" Stretch="Fill" VerticalAlignment="Center" Width="50" />
+            <TextBlock FontWeight="Bold" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Height="Auto" HorizontalAlignment="Center" Margin="0,50,0,0" Name="progressText" Text="" VerticalAlignment="Center" Foreground="{StaticResource PhoneAccentBrush}" />
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="12,-70,0,0" Orientation="Horizontal" Width="350">
+            <TextBlock FontWeight="Bold" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Height="Auto" HorizontalAlignment="Right" Margin="0" Name="currentImprovement" Text="" VerticalAlignment="Center" Foreground="{StaticResource PhoneAccentBrush}" Width="Auto" />
+                <TextBlock FontWeight="Bold" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Height="Auto" HorizontalAlignment="Center" Margin="0" Name="dots" Text="" VerticalAlignment="Center" Foreground="{StaticResource PhoneAccentBrush}" Width="Auto" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
