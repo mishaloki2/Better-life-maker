@@ -19,7 +19,6 @@
         </Grid.RowDefinitions>
         <Image Height="Auto" HorizontalAlignment="Stretch" Margin="0" Source="/Image/bgImage.jpg" Name="bgImage" Stretch="Fill" VerticalAlignment="Stretch" Width="Auto" Opacity="0" Tap="bgImage_Tap" />
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Content="Make my life better" Height="72" HorizontalAlignment="Center" Margin="0,200,0,0" Name="makeBtn" VerticalAlignment="Center" Width="Auto" Click="makeBtn_Click" />
             <ProgressBar Height="4" HorizontalAlignment="Stretch" Margin="0" Name="lifeLine" VerticalAlignment="Center" Width="460" />
             <Image Height="50" Source="/Image/thumb_down.png"  HorizontalAlignment="Left" Margin="12,80,0,0" Name="worseImage" Stretch="Fill" VerticalAlignment="Center" Width="50" />
             <Image Height="50" Source="/Image/thumb_up.png" HorizontalAlignment="Right" Margin="0,-70,0,0" Name="betterImage" Stretch="Fill" VerticalAlignment="Center" Width="50" />
